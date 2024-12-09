@@ -1,0 +1,58 @@
+section, section.content {
+    max-width: 100%;
+}
+/* fluid 5 columns */
+.grid-sizer,
+.grid-item, .image-container { width: 33.33%; }
+/* 2 columns */
+.grid-item--width2 { width: 40%; }
+.p-2 {padding:1px}
+
+.grid-item {
+    transition: transform 0.9s, opacity 0.9s;
+}
+.grid-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.9s, transform 0.9s;
+}
+
+.grid-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Контейнер для изображения */
+.image-container {
+  position: relative; /* Для управления позицией содержимого */
+  overflow: hidden; /* Скрыть всё, что выходит за границы */
+  width: 100%; /* Ширина контейнера */
+  height: 100%; /* Высота контейнера */
+}
+
+/* Изображение */
+.image-container img {
+  transition: transform 0.3s ease; /* Плавное увеличение */
+  width: 100%; /* Изображение подстраивается под контейнер */
+  height: 100%; /* Масштабируется относительно контейнера */
+  object-fit: cover; /* Обрезает изображение по размеру контейнера */
+}
+
+/* Увеличение при наведении */
+.image-container:hover img {
+  transform: scale(1.1); /* Увеличение на 10% */
+}
+.grid {
+  display: grid;
+}
+
+@media (max-width: 1200px) {
+.grid-sizer,
+.grid-item, .image-container { width: 50%; }
+.image-container {width:auto}
+}
+
+.grid-item img {
+  width: 100%; /* Изображение заполняет блок */
+  height: auto; /* Сохраняем пропорции */
+}
+
