@@ -1,3 +1,12 @@
+window.addEventListener('DOMContentLoaded', () => {
+    const allImg = document.querySelectorAll('.grid-item');
+    const randomNumber = Math.floor(Math.random() * 10) + 1;
+    if (randomNumber>5) {
+        allImg.forEach(img => {
+            img.style.margin = '10px'
+        });
+    }
+});
 jQuery(document).ready(function($) {
     'use strict';
     $('body').prepend('<div id="spinningSquaresG"><div id="spinningSquaresG_1" class="spinningSquaresG"></div><div id="spinningSquaresG_2" class="spinningSquaresG"></div><div id="spinningSquaresG_3" class="spinningSquaresG"></div><div id="spinningSquaresG_4" class="spinningSquaresG"></div><div id="spinningSquaresG_5" class="spinningSquaresG"></div><div id="spinningSquaresG_6" class="spinningSquaresG"></div><div id="spinningSquaresG_7" class="spinningSquaresG"></div><div id="spinningSquaresG_8" class="spinningSquaresG"></div></div>');
